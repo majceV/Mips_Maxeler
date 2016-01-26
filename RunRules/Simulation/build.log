@@ -1,0 +1,83 @@
+Mon 17:14: ########################################## 
+Mon 17:14: Compiling.
+Mon 17:14: ########################################## 
+
+Mon 17:14: MaxCompiler version: 2015.1.1 (simulation only).
+Mon 17:14: Build Simulation run rule for Maxeler_Brightness start time: Mon Jan 11 17:14:42 PST 2016.
+Mon 17:14: Project location: /home/demo/Desktop/konacnoBrightness/Maxeler_Brightness .
+Mon 17:14: Detailed build log: /home/demo/Desktop/konacnoBrightness/Maxeler_Brightness /RunRules/Simulation/build.log.
+
+Mon 17:14: Compiling Engine Code.
+Mon 17:14: Building Brightness.max file. 
+Mon 17:14: Setting environment variable:
+Mon 17:14: MAXCOMPILER_BUILD_DIR : /home/demo/Desktop/konacnoBrightness/Maxeler_Brightness /RunRules/Simulation/maxfiles
+Mon 17:14: MAX_BUILDPARAMS : DFEModel='MAX2C' target='DFE_SIM' maxFileName='Brightness'  
+Mon 17:14: Building output:
+Mon 17:14: MaxCompiler version: 2015.1.1 (simulation only)
+Mon 17:14: Build "Brightness" start time: Mon Jan 11 17:14:48 PST 2016
+Mon 17:14: Main build process running as user demo on host localhost.localdomain
+Mon 17:14: Build location: /home/demo/Desktop/MaxCompiler-Builds/Brightness_MAX2C_DFE_SIM
+Mon 17:14: Detailed build log available in "_build.log"
+Mon 17:14: Instantiating manager
+Mon 17:14: Instantiating kernel "BrightnessKernel"
+Mon 17:14: Compiling manager (CPU I/O Only)
+Mon 17:14: 
+Mon 17:14: Compiling kernel "BrightnessKernel"
+Mon 17:14: Running back-end simulation build (3 phases)
+Mon 17:14: (1/3) - Prepare MaxFile Data (GenerateMaxFileDataFile)
+Mon 17:14: (2/3) - Compile Simulation Modules (SimCompilePass)
+Mon 17:15: (3/3) - Generate MaxFile (AddSimObjectToMaxFilePass)
+Mon 17:15: MaxFile: /home/demo/Desktop/MaxCompiler-Builds/Brightness_MAX2C_DFE_SIM/results/Brightness.max (MD5Sum: 3c0bf37454f04212cb6a9ab619d9cf9f)
+Mon 17:15: Build completed: Mon Jan 11 17:15:03 PST 2016 (took 15 secs)
+Mon 17:15: Executing command:
+Mon 17:15: cp /home/demo/Desktop/konacnoBrightness/Maxeler_Brightness /RunRules/Simulation/maxfiles/Brightness.h /home/demo/Desktop/konacnoBrightness/Maxeler_Brightness /RunRules/Simulation/include/Brightness.h 
+Mon 17:15: Command output:
+Mon 17:15: Building: Brightness.max file finished.
+Mon 17:15: Engine build finished.
+Mon 17:15: Compiling CPU Code.
+Mon 17:15: Run CPU project make files updating
+Mon 17:15: Executing command:
+Mon 17:15: java -jar /opt/maxeler/maxcompiler/lib/MaxIDE/projectAdmin.jar -u /home/demo/Desktop/konacnoBrightness/Maxeler_Brightness  Simulation 
+Mon 17:15: Command output:
+
+Mon 17:15: MaxCompiler Project Admin Tool Version 2015.1.10001
+Mon 17:15:  Copyright Maxeler Technologies 2010 - 2015. All rights reserved.
+
+Mon 17:15: Handler version 1
+Mon 17:15: Updating RunRule dependent Makefiles for RunRule 'Simulation'
+Mon 17:15: Found makefiles: 1
+Mon 17:15: 	Updated: Simulation
+Mon 17:15: Run CPU make.
+Mon 17:15: make RUNRULE=Simulation 
+Mon 17:15: Command output:
+Mon 17:15: make -f Makefile ../RunRules/Simulation/binaries/Brightness
+Mon 17:15: make[1]: Entering directory `/home/demo/Desktop/konacnoBrightness/Maxeler_Brightness /CPUCode'
+Mon 17:15: /opt/maxeler/maxcompiler/bin/sliccompile "../RunRules/Simulation/maxfiles/Brightness.max" "../RunRules/Simulation/objects/slic_Brightness.o"
+Mon 17:15: Processing maxfile for MAX2C_SIM from '../RunRules/Simulation/maxfiles/Brightness.max'.
+Mon 17:15: gcc -std=gnu99 -Wall -Werror -fno-guess-branch-probability -frandom-seed=foo -Wno-unused-variable -Wno-unused-function -fPIC -I /opt/maxeler/maxcompiler/include/slic -DMAXFILE_INC="/home/demo/Desktop/konacnoBrightness/Maxeler_Brightness /CPUCode/../RunRules/Simulation/maxfiles/Brightness.max" -DSLIC_NO_DESTRUCTORS -c /opt/maxeler/maxcompiler/src/slicinterface/MaxFileInit.c -o slic_Brightness.o 
+Mon 17:15: Copying .max file C object into '/home/demo/Desktop/konacnoBrightness/Maxeler_Brightness /CPUCode/../RunRules/Simulation/objects'
+Mon 17:15: cc -g -O3 -Wall -Wextra -fmessage-length=0 -I ../RunRules/Simulation/include -I. -I/opt/maxeler/maxcompiler/lib/maxeleros-sim/include -I/opt/maxeler/maxcompiler/include/slic -D_XOPEN_SOURCE=600  -std=c99 -DBUILDNAME_MAXFILE_1=Brightness -DMAXFILE_1="Brightness.max"  -o "../RunRules/Simulation/objects/BrightnessCpuCode.o" -c "BrightnessCpuCode.c"
+Mon 17:15: BrightnessCpuCode.c: In function ‘main’:
+Mon 17:15: BrightnessCpuCode.c:250: warning: pointer targets in assignment differ in signedness
+Mon 17:15: BrightnessCpuCode.c:243: warning: unused variable ‘inImage’
+Mon 17:15: cc -g -O3 -Wall -Wextra -fmessage-length=0 -I ../RunRules/Simulation/include -I. -I/opt/maxeler/maxcompiler/lib/maxeleros-sim/include -I/opt/maxeler/maxcompiler/include/slic -D_XOPEN_SOURCE=600  -std=c99 -DBUILDNAME_MAXFILE_1=Brightness -DMAXFILE_1="Brightness.max"  -MM -MP -MT "../RunRules/Simulation/objects/BrightnessCpuCode.o" "BrightnessCpuCode.c" > "../RunRules/Simulation/objects/BrightnessCpuCode.d"
+Mon 17:15: cc -g -O3 -Wall -Wextra -fmessage-length=0 -I ../RunRules/Simulation/include -I. -I/opt/maxeler/maxcompiler/lib/maxeleros-sim/include -I/opt/maxeler/maxcompiler/include/slic -D_XOPEN_SOURCE=600  -std=c99 -DBUILDNAME_MAXFILE_1=Brightness -DMAXFILE_1="Brightness.max"  -o "../RunRules/Simulation/objects/ppmIO.o" -c "ppmIO.c"
+Mon 17:15: cc -g -O3 -Wall -Wextra -fmessage-length=0 -I ../RunRules/Simulation/include -I. -I/opt/maxeler/maxcompiler/lib/maxeleros-sim/include -I/opt/maxeler/maxcompiler/include/slic -D_XOPEN_SOURCE=600  -std=c99 -DBUILDNAME_MAXFILE_1=Brightness -DMAXFILE_1="Brightness.max"  -MM -MP -MT "../RunRules/Simulation/objects/ppmIO.o" "ppmIO.c" > "../RunRules/Simulation/objects/ppmIO.d"
+Mon 17:15: cc ../RunRules/Simulation/objects/BrightnessCpuCode.o ../RunRules/Simulation/objects/ppmIO.o ../RunRules/Simulation/objects/slic_Brightness.o  -L/opt/maxeler/maxcompiler/lib -L/opt/maxeler/maxcompiler/lib/maxeleros-sim/lib -lslic -lmaxeleros -lm -lpthread  -o "../RunRules/Simulation/binaries/Brightness"
+Mon 17:15: make[1]: Leaving directory `/home/demo/Desktop/konacnoBrightness/Maxeler_Brightness /CPUCode'
+Mon 17:15: Build completed: Mon Jan 11 17:15:07 PST 2016
+
+
+Mon 17:15: ########################################## 
+Mon 17:15: Running
+Mon 17:15: ########################################## 
+Mon 17:15: Executing command:
+Mon 17:15: '/home/demo/Desktop/konacnoBrightness/Maxeler_Brightness /RunRules/Simulation/binaries/Brightness' 
+Mon 17:15: Command output:
+Mon 17:15: Loading image.
+Mon 17:15: CPU TIME  - 10.51
+Mon 17:15: Running Kernel.
+Mon 17:15: Maxeler  - 10851.71
+Mon 17:15: Saving image.
+Mon 17:15: Exiting
+Mon 17:15: Process terminated with exit code 0.

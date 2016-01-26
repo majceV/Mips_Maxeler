@@ -1,0 +1,35 @@
+
+package brightness;
+
+import com.maxeler.maxcompiler.v2.kernelcompiler.Kernel;
+import com.maxeler.maxcompiler.v2.kernelcompiler.KernelParameters;
+import com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEType;
+import com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar;
+
+class BrightnessKernel extends Kernel {
+
+	private static final DFEType type = dfeInt(32);
+
+	BrightnessKernel(KernelParameters parameters) {
+		super(parameters);
+
+		DFEVar input1 = io.input("inImage1", type);
+		DFEVar input2 = io.input("inImage2", type);
+		DFEVar input3 = io.input("inImage3", type);
+
+		int bc = 50;
+
+		DFEVar result1 = input1 + bc < 255 ? input1 + bc : 255;
+			   result1 = result1 < 0 ? 0 : result1;
+		DFEVar result2 = input2 + bc < 255 ? input2 + bc : 255;
+				result2 = result2 < 0 ? 0 : result2;
+		DFEVar result3 = input3 + bc < 255 ? input3 + bc : 255;
+				result3 = result3 < 0 ? 0 : result3;
+
+		io.output("outImage1", result1, type);
+		io.output("outImage2", result2, type);
+		io.output("outImage3", result3, type);
+	}
+
+
+}

@@ -1,0 +1,41 @@
+/**
+ * Document: MaxCompiler Training (maxcompiler-training.pdf)
+ * Chapter: 1      Exercise: 1      Name: Brightness
+ * MaxFile name: Brightness
+ * Summary:
+ * 	   Kernel that takes a scalar input and adds it to every pixel
+ *     to adjust the brightness of an image.
+ */
+package brightness;
+
+import com.maxeler.maxcompiler.v2.kernelcompiler.Kernel;
+import com.maxeler.maxcompiler.v2.kernelcompiler.KernelParameters;
+import com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEType;
+import com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar;
+
+class BrightnessKernel extends Kernel {
+
+	private static final DFEType typeInt = dfeInt(32);
+	private static final DFEType typeFloat = dfeFloat(8,24);
+
+	BrightnessKernel(KernelParameters parameters) {
+		super(parameters);
+
+
+
+		DFEVar input1 = io.input("gamma1", typeFloat);
+		DFEVar input2 = io.input("gamma2", typeFloat);
+		DFEVar input3 = io.input("gamma3", typeFloat);
+
+
+		DFEVar result1 = input1 * constant.var(255.0);
+		DFEVar result2 = input2 * constant.var(255.0);
+		DFEVar result3 = input3 * constant.var(255.0);
+
+		io.output("outImage1", result1.cast(typeInt), typeInt);
+		io.output("outImage2", result2.cast(typeInt), typeInt);
+		io.output("outImage3", result3.cast(typeInt), typeInt);
+	}
+
+
+}
